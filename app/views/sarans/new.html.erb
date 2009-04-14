@@ -1,0 +1,31 @@
+<h1>New saran</h1>
+
+<%= error_messages_for :saran %>
+
+<% form_for(@saran) do |f| %>
+  <p>
+    <b>Nama</b><br />
+    <%= f.text_field :nama %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <b>Subjek</b><br />
+    <%= f.text_field :subjek %>
+  </p>
+
+  <p>
+    <b>Komentar</b><br />
+    <%= f.text_area :komentar %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+<p>
+<%= link_to 'Back', sarans_path %> </p>

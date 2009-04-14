@@ -1,0 +1,26 @@
+<h1>Saran & Kritik Anda</h1>
+
+<p>Berisi saran dan kritik dari customer mengenai isi dan tampilan website ini</p>
+
+<p>
+
+<% for saran in @sarans %>
+  
+    
+	<p><b><%= saran.komentar%></b><br>
+	<small>Dari : <%=h saran.nama %></small><br></p>
+    
+	
+	<% if logged_in? %>
+	<p><%= link_to 'Destroy', saran, :confirm => 'Are you sure?', :method => :delete %></p>
+	<%end%>
+
+  
+  
+<% end %>
+
+</p>
+
+<p>
+	
+<%= link_to 'Kirim Kritik & Saran Anda', new_saran_path %></p>

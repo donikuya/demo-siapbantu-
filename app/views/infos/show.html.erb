@@ -1,0 +1,25 @@
+<p>
+  
+  <h1><%=h @info.subjek %></h1>
+</p>
+
+<p>
+  
+  <%=h @info.body %>
+</p>
+
+
+
+<p>
+  <small><b>Author:</b>
+  <%=h @info.author %></small>
+</p>
+<hr>
+<h1>Komentar</h1>
+
+<p>
+<% if logged_in? %>
+
+<%= link_to 'Edit', edit_info_path(@info) %> |
+<% end %>
+<%= link_to 'Back', infos_path %></p>

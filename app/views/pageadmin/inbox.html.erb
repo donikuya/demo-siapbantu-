@@ -1,0 +1,26 @@
+<h1><%= @title%></h1>
+
+<table >
+<tr>
+<td width = 100><b>Email</b></td>
+<td width = 200><b>Subjek</b></td>
+<td><b>Action</b></td>
+
+</tr>
+
+<% @kontaks.each do |d|%>
+
+<tr>
+
+
+<td><%= d.email %></td>
+<td><%=link_to  d.subjek, {:action => 'show_inbox', :id => d.id} %></td>
+
+<td>
+<%= link_to 'hapus', {:action => 'delete_inbox', :id => d.id}%>
+</td>
+</tr>
+<% end %>
+
+</table>
+

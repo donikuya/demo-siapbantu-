@@ -1,0 +1,10 @@
+<% for saran in @sarans %>
+  <ul>
+    <li>nama :<%=h saran.nama %></li>
+    <code> <br><%=h saran.komentar %></code>
+    <td><%=h saran.posted_at.strftime("%B %d, %Y at %I:%M %p") %></td>
+    <%= link_to 'Show', saran %> |
+    <%= link_to 'Edit', edit_saran_path(saran) %> |
+    <%= link_to 'Destroy', saran, :confirm => 'Are you sure?', :method => :delete %>
+  </ul>
+<% end %>

@@ -1,0 +1,28 @@
+<h1>Tips & Info</h1>
+
+<% if @infos.blank? %>
+	<p>Saat ini belum ada informasi ..</P>
+<%else%>
+
+<p><% for info in @infos %>
+  
+    <blockquote><%=link_to info.subjek,:action => 'show', :id => info.id %></blockquote>
+	<p><small>No Comments ()</small></P>
+	
+	
+	</p>
+	<p>
+
+<% if logged_in? %>
+<%= link_to 'Edit', edit_info_path(info) %> |
+    <%= link_to 'Destroy', info, :confirm => 'Are you sure?', :method => :delete %>
+<% end%>
+
+<% end %></P>
+
+<% end%>
+
+<br />
+
+
+

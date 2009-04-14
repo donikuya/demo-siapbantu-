@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title><%= @title %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<%= stylesheet_link_tag 'BrightSide'%>
+<body>
+<div id="wrap">
+  <div id="header">
+    <h1 id="logo">SIAP<span class="green">BANTU</span></h1>
+    <h2 id="slogan">Kami Siap Membantu Kebutuhan Anda</h2>
+    <form method="post" class="searchform" action="http://www.free-css.com/">
+      <p>
+        <input type="text" name="search_query" class="textbox" />
+        <input type="submit" name="search" class="button" value="Search" />
+      </p>
+    </form>
+    <ul>
+      <li id="current"><a href="http://localhost:3000/"><span>Home</span></a></li>
+      <li><a href="http://localhost:3000/layanan"><span>Layanan</span></a></li>
+      <li><a href="http://localhost:3000/infos"><span>Tips & Info</span></a></li>
+      <li><a href="http://localhost:3000/sarans"><span>Saran & Kritik</span></a></li>
+      <li><a href="http://localhost:3000/kontaks"><span>Kontak</span></a></li>
+      
+    </ul>
+  </div>
+  <div id="content-wrap"> <img src="../images/headerphoto.jpg" width="820" height="120" alt="headerphoto" class="no-border" />
+    <div id="sidebar" >
+	<% if logged_in?%>
+	<h1>Sidebar Admin</h1>
+      <ul class="sidemenu">
+      <li id="current"><a href="http://localhost:3000/pageadmin/inbox"><span>Inbox </span></a></li>
+      <li><a href="http://localhost:3000/infos/new"><span>Add Info</span></a></li>
+      <li><a href="http://localhost:3000/sarans"><span>Saran & Kritik</span></a></li>
+      <li><a href="http://localhost:3000/logout"><span>Logout</span></a></li>
+      </ul>
+	<% end %>
+      <h1>Sidebar Menu</h1>
+      <ul class="sidemenu">
+        <li id="current"><a href="http://localhost:3000/"><span>Home</span></a></li>
+      <li><a href="http://localhost:3000/layanan"><span>Layanan</span></a></li>
+      <li><a href="http://localhost:3000/infos"><span>Tips & Info</span></a></li>
+      <li><a href="http://localhost:3000/sarans"><span>Saran & Kritik</span></a></li>
+      <li><a href="http://localhost:3000/kontaks"><span>Kontak</span></a></li>
+      </ul>
+      <h1>Site Link</h1>
+      <ul class="sidemenu">
+        <li><a href="http://www.google.com/">Google</a></li>
+        <li><a href="http://www.kaskus.com/">Kaskus</a></li>
+        <li><a href="http://www.pikiran-rakyat.com/">Pikiran Rakyat</a></li>
+        <li><a href="http://www.yahoo.com/">Yahoo</a></li>
+        
+      </ul>
+      <h1>Customer Service</h1>
+      <p>"Sorry, Yahoo Messenger Service Is Not Available ..<br> we'll come soon"</p>
+	  <p>Please <a href=http://localhost:3000/kontaks>Contact Us</a></p>
+      <p class="align-right"></p>
+    </div>
+    <div id="main"> <a name="TemplateInfo"></a>
+	
+      <p><h1><%= @title%></h1>
+      <%= flash[:notice]%>
+	  <%= yield %>
+	  
+	  </p>
+      
+      
+      <br /><br />
+	  
+	  
+    </div>
+    <div id="rightbar">
+      <h1>Layanan Kami</h1>
+      <h3>Konsultasi</h3><p align=justify>
+<code>Konsultasi meliputi segala hal yang berhubungan dengan proses bimbingan untuk penulisan Skripsi, Tuga..<br> <a href =http://localhost:3000/layanan/konsultasi>selanjutnya..</a></code></p>
+
+
+
+
+
+<h3>Jurnal</h3><p align=justify>
+<code>Client atau konsumen yang akan memakai jasa pencarian jurnal diharuskan memberikan key words atau kata kunci yang terk..<br> <a href =http://localhost:3000/layanan/jurnal>selanjutnya..</a></code>
+
+</p>
+
+
+
+
+<h3>Data</i></h3><p align=justify>
+<code>Untuk layanan data kami menyediakan jasa entry data dan..<br> <a href =http://localhost:3000/layanan/data>selanjutnya..</a></code>
+
+</p>
+
+
+
+
+
+<h3>Terjemahan</h3><p align=justify>
+<code>Sedangkan untuk layanan terjemahan kami menyediakan jasa diantaranya terjemahan bahasa Inggris ke bahasa Indonesia, bahasa..<br> <a href =http://localhost:3000/layanan/terjemahan>selanjutnya..</a></code>
+
+</p>
+
+
+    
+    </div>
+  </div>
+  
+  
+  <div id="footer">
+    <div class="footer-left">
+      <p class="align-left"> &copy; 2009 <strong>www.siapbantu.com</strong> | Design by Hokabay | Valid <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> </p>
+    </div>
+	
+	
+    <div class="footer-right">
+      <p class="align-right"> <a href="http://www.zonecore.info/">developer</a>&nbsp;|&nbsp;<a href="#http://www.siapbantu.com/rss">RSS Feed</a> </p>
+    </div>
+	
+	
+  </div>
+</div>
+</body>
+</html>

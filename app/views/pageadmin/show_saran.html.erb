@@ -1,0 +1,28 @@
+<p>
+  <b>Nama:</b>
+  <%=h @saran.nama %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @saran.email %>
+</p>
+
+<p>
+  <b>Subjek:</b>
+  <%=h @saran.subjek %>
+</p>
+
+<p>
+  <b>Komentar:</b>
+  <%=h @saran.komentar %>
+</p>
+
+<p>
+  <b>Posted at:</b>
+  <%=h @saran.posted_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_saran_path(@saran) %> |
+<%= link_to 'Back', sarans_path %>

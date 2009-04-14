@@ -1,0 +1,23 @@
+<h1>Listing infos</h1>
+
+
+
+<p><% for info in @infos %>
+  
+    <blockquote><%=h info.subjek %></blockquote>
+	<p class="post-footer align-right"> <%= link_to 'Read more', info %> <a href="http://www.free-css.com/" class="comments">Comments (7)</a> <span class="date"><%=h info.posted_at.strftime("%B %d, %Y") %></span> 
+	
+	
+	</p>
+	<p>
+
+
+<%= link_to 'Edit', edit_info_path(info) %> |
+    <%= link_to 'Destroy', info, :confirm => 'Are you sure?', :method => :delete %>
+
+<% end %></P>
+
+<br />
+
+
+<%= link_to 'New info', new_info_path %>

@@ -1,0 +1,40 @@
+
+
+
+<h1>Kirim Pesan</h1>
+
+<%= error_messages_for :kontak %>
+
+<% form_for(@kontak) do |f| %>
+  <p>
+    <b>Nama</b><br />
+    <%= f.text_field :nama %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <b>Subjek</b><br />
+    <%= f.text_field :subjek %>
+  </p>
+  
+  
+  <p>
+    <b>Pesan</b><br />
+    <%= f.text_area :pesan %>
+  </p>
+
+  <p>
+    <%= f.submit "Kirim" %>
+  </p>
+<% end %>
+
+
+
+
+
+
+
